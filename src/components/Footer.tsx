@@ -1,0 +1,103 @@
+import Link from "next/link"
+import { AtSign, Mail, Phone } from "lucide-react"
+
+const footerLinks = [
+    {
+        heading: "Product",
+        links: [
+            { label: "Live Sessions", href: "#" },
+            { label: "On-Demand Library", href: "#" },
+            { label: "Coaches", href: "#" },
+            { label: "Plans & Pricing", href: "#" },
+        ],
+    },
+    {
+        heading: "Company",
+        links: [
+            { label: "About", href: "/about" },
+            { label: "Careers", href: "#" },
+            { label: "Contact", href: "/contact" },
+        ],
+    },
+    {
+        heading: "Legal",
+        links: [
+            { label: "Terms of Service", href: "#" },
+            { label: "Privacy Policy", href: "#" },
+            { label: "Refund Policy", href: "#" },
+        ],
+    },
+]
+
+const socialLinks = [
+    {
+        icon: AtSign,
+        label: "Instagram",
+        href: "#"
+    },
+    {
+        icon: Mail,
+        label: "Email",
+        href: "mailto:hello@fitwithsai.com",
+    },
+    {
+        icon: Phone,
+        label: "Phone",
+        href: "tel:+919876543210",
+    },
+]
+
+const Footer = () => {
+    return (
+        <footer className="footer">
+            <div className="footer-top">
+                <div className="footer-brand">
+                    <span className="text-headline-sm footer-logo">Fit with Sai</span>
+                    <p className="text-body-md footer-tagline">
+                        Live and on-demand coaching, built around your week — not a gym's.
+                    </p>
+                    <div className="footer-social">
+                        {socialLinks.map(({ icon: Icon, label, href }) => (
+                            <Link
+                                key={label}
+                                href={href}
+                                aria-label={label}
+                                className="footer-social-link"
+                            >
+                                <Icon size={18} strokeWidth={2} aria-hidden="true" />
+
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
+                <nav className="footer-cols" aria-label="Footer">
+                    {footerLinks.map((col) => (
+                        <div className="footer-col" key={col.heading}>
+                            <span className="text-label-caps footer-col-heading">
+                                {col.heading}
+                            </span>
+                            <ul className="footer-col-links">
+                                {col.links.map((link) => (
+                                    <li key={link.label}>
+                                        <Link href={link.href} className="footer-link">
+                                            {link.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </nav>
+            </div>
+
+            <div className="footer-bottom">
+                <p className="text-label-caps footer-copyright">
+                    © {new Date().getFullYear()} Fit with Sai. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    )
+}
+
+export default Footer
