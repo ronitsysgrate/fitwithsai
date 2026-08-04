@@ -42,6 +42,14 @@ const services = [
 ]
 
 const Services = () => {
+
+    const handleCardGlow = (e: React.MouseEvent<HTMLDivElement>) => {
+        const card = e.currentTarget
+        const rect = card.getBoundingClientRect()
+        card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`)
+        card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`)
+    }
+
     return (
         <section className="services">
             <Reveal as="div" className="services-header">
@@ -55,6 +63,7 @@ const Services = () => {
                         as="div"
                         className="glass-card services-card hover-lift"
                         key={title}
+                        glow
                     >
                         <span className="services-icon">
                             <Icon size={20} strokeWidth={2.25} aria-hidden="true" />

@@ -16,6 +16,7 @@ type StaggerItemProps = {
     children: ReactNode
     as?: ElementType
     className?: string
+    glow?: boolean
 }
 
 /**
@@ -55,10 +56,29 @@ export const StaggerGroup = ({ children, as = "div", stagger = 0.12, className }
     )
 }
 
-export const StaggerItem = ({ children, as = "div", className }: StaggerItemProps) => {
+export const StaggerItem = ({ children, as = "div", className, glow }: StaggerItemProps) => {
     const MotionTag = motion[as as "div"] ?? motion.div
+
+    const handleMouseMove = glow
+        ? (e: React.MouseEvent<HTMLElement>) => {
+            const card = e.currentTarget
+            const rect = card.getBoundingClientRect()
+            card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`)
+            card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`)
+        }
+        : undefined
+
+    // `card-glow` is what actually paints the cursor-tracking spotlight
+    // (see globals.css) — without it, --mouse-x/--mouse-y are set but
+    // nothing renders them, so glow must always carry this class.
+    const combinedClassName = glow ? [className, "card-glow"].filter(Boolean).join(" ") : className
+
     return (
-        <MotionTag className={className} variants={staggerItem}>
+        <MotionTag
+            className={combinedClassName}
+            variants={staggerItem}
+            onMouseMove={handleMouseMove}
+        >
             {children}
         </MotionTag>
     )

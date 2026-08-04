@@ -217,6 +217,44 @@ h4 {
     border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)) 1;
 }
 
+/* Cursor-tracking spotlight glow for cards — light traces the card's
+   1px border near the cursor rather than washing over the card body.
+   Achieved by masking a radial gradient down to just the border ring
+   (content-box cut out of the padding-box via mask-composite). */
+.card-glow {
+    position: relative;
+}
+
+.card-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: radial-gradient(160px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(180, 214, 110, 0.9) 0%,
+            rgba(180, 214, 110, 0.35) 45%,
+            transparent 70%);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card-glow:hover::before {
+    opacity: 1;
+}
+
+.card-glow>* {
+    position: relative;
+    z-index: 1;
+}
+
 /* ---------------------------------- */
 /* Buttons                             */
 /* ---------------------------------- */

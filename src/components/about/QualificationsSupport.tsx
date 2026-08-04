@@ -46,10 +46,6 @@ const QualificationsSupport = () => {
                             </StaggerItem>
                         ))}
                     </StaggerGroup>
-
-                    <button className="btn-secondary btn-hover-glow quals-cta">
-                        View All Qualifications
-                    </button>
                 </Reveal>
 
                 {/* Who I Support column */}
