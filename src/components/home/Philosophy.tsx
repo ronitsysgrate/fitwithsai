@@ -37,6 +37,7 @@ const Philosophy = () => {
                         as="div"
                         className="glass-card philosophy-card hover-lift"
                         key={title}
+                        glow
                     >
                         <span className="philosophy-icon">
                             <Icon size={20} strokeWidth={2.25} aria-hidden="true" />
