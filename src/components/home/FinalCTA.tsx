@@ -24,8 +24,8 @@ const FinalCTA = () => {
                 </p>
 
                 <div className="final-cta-actions">
-                    <button className="btn-primary btn-hover-glow">Start Free Session</button>
-                    <button onClick={() => router.push('/contact')} className="btn-secondary btn-hover-glow">Contact Us</button>
+                    <button onClick={() => router.push('/contact')} className="btn-primary btn-hover-glow">Start Free Session</button>
+                    <button onClick={() => router.push('/about')} className="btn-secondary btn-hover-glow">Read More</button>
                 </div>
             </Reveal>
         </section>
