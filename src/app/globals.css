@@ -20,17 +20,17 @@
     --outline: #8c8985;
     --outline-variant: #3a3938;
 
-    /* ---- Primary (Trail Green) ---- */
-    --surface-tint: #5f7c1f;
+    /* ---- Primary (Trail Orange) ---- */
+    --surface-tint: #cc3600;
     --primary: #ffffff;
-    --on-primary: #171f08;
-    --primary-container: #6c8e23;
-    --on-primary-container: #303f10;
-    --inverse-primary: #2d3b0f;
-    --primary-fixed: #6c8e23;
-    --primary-fixed-dim: #5f7c1f;
-    --on-primary-fixed: #0d1104;
-    --on-primary-fixed-variant: #222d0b;
+    --on-primary: #230b02;
+    --primary-container: #ea3f01;
+    --on-primary-container: #551903;
+    --inverse-primary: #451605;
+    --primary-fixed: #ea3f01;
+    --primary-fixed-dim: #cc3600;
+    --on-primary-fixed: #1a0801;
+    --on-primary-fixed-variant: #421302;
 
     /* ---- Secondary ---- */
     --secondary: #c8c6c5;
@@ -63,8 +63,8 @@
     --on-background: #e5e2e1;
 
     /* ---- Brand accent (from Colors section — brand gradient, not the M3 token set) ---- */
-    --electric-volt: #6f8f2a;
-    --forest-lime: #4f6b18;
+    --electric-volt: #ff6229;
+    --forest-lime: #d23800;
     --pure-black: #000000;
 
     /* ---- Typography (fonts loaded via next/font in layout.tsx) ---- */
@@ -95,10 +95,10 @@
     --glass-blur-sm: 20px;
     --glass-blur-lg: 40px;
     --glass-border: rgba(255, 255, 255, 0.15);
-    --glass-glow: rgba(111, 143, 42, 0.12);
-    --glass-glow-soft: rgba(111, 143, 42, 0.07);
-    --glass-glow-strong: rgba(111, 143, 42, 0.18);
-    --glass-glow-lime-dim: rgba(79, 107, 24, 0.14);
+    --glass-glow: rgba(255, 98, 41, 0.12);
+    --glass-glow-soft: rgba(255, 98, 41, 0.07);
+    --glass-glow-strong: rgba(255, 98, 41, 0.18);
+    --glass-glow-lime-dim: rgba(210, 56, 0, 0.14);
 }
 
 /* ---------------------------------- */
@@ -232,8 +232,8 @@ h4 {
     padding: 1px;
     border-radius: inherit;
     background: radial-gradient(160px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-            rgba(180, 214, 110, 0.9) 0%,
-            rgba(180, 214, 110, 0.35) 45%,
+            rgba(255, 149, 110, 0.9) 0%,
+            rgba(255, 149, 110, 0.35) 45%,
             transparent 70%);
     mask:
         linear-gradient(#fff 0 0) content-box,
@@ -319,7 +319,7 @@ h4 {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
     color: var(--electric-volt);
     font-family: var(--font-mono);
     font-size: 12px;
@@ -828,7 +828,7 @@ h4 {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: var(--radius-md);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
     color: var(--electric-volt);
 }
 
@@ -944,7 +944,7 @@ h4 {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: var(--radius-md);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
     color: var(--electric-volt);
 }
 
@@ -1016,7 +1016,7 @@ h4 {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: var(--radius-md);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
     color: var(--electric-volt);
 }
 
@@ -1171,7 +1171,7 @@ h4 {
 
 .footer-social-link:hover {
     color: var(--electric-volt);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
 }
 
 .footer-cols {
@@ -1338,7 +1338,7 @@ h4 {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: var(--radius-md);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
     color: var(--electric-volt);
 }
 
@@ -1446,7 +1446,7 @@ h4 {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: var(--radius-md);
-    background: rgba(111, 143, 42, 0.12);
+    background: rgba(255, 98, 41, 0.12);
     color: var(--electric-volt);
 }
 
@@ -1518,4 +1518,47 @@ a.btn-secondary {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* ---------------------------------- */
+/* Legal / simple text page            */
+/* ---------------------------------- */
+
+.legal-page {
+    background: var(--pure-black);
+    padding: calc(var(--space-xl) * 1.2) var(--space-margin-mobile);
+}
+
+@media (min-width: 768px) {
+    .legal-page {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-margin-desktop);
+    }
+}
+
+.legal-page-content {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .legal-page-content {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.legal-page-title {
+    color: var(--on-background);
+    margin-bottom: var(--space-xs);
+}
+
+.legal-page-text {
+    color: var(--on-surface-variant);
 }

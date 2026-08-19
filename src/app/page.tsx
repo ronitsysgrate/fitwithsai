@@ -10,7 +10,7 @@ const Page = () => {
             <Hero />
             <HowItWorks />
             <Services />
-            <Philosophy />
+            {/* <Philosophy /> */}
             <FinalCTA />
         </>
     )

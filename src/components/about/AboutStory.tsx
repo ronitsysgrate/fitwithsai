@@ -32,7 +32,7 @@ const AboutStory = () => {
                         My journey started in professional kitchens, where I spent more
                         than 14 years building a career from the ground up and eventually
                         becoming a Head Chef. Long hours, pressure, leadership and
-                        responsibility taught me discipline — but they also taught me
+                        responsibility — but they also taught me
                         something more important: I found purpose in helping people grow.
                     </Reveal>
 
@@ -50,8 +50,8 @@ const AboutStory = () => {
 
                     <Reveal as="p" className="text-body-md about-story-para">
                         Today, I work as a Fitness and Hospitality Trainer and Assessor,
-                        helping others develop skills, confidence and belief in what they
-                        can achieve.
+                        and as a WeFlex Fitness Trainer, delivering personalised fitness support
+                        for people of all ages and abilities, including NDIS participants.
                     </Reveal>
 
                     <Reveal as="p" className="text-body-md about-story-para">

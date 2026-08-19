@@ -54,7 +54,7 @@ const Hero = () => {
                         whileHover={prefersReducedMotion ? undefined : hoverScale.whileHover}
                         whileTap={prefersReducedMotion ? undefined : hoverScale.whileTap}
                     >
-                        Start Free Session
+                        Book Free Consultation
                     </motion.button>
                     <motion.button
                         className="btn-secondary"

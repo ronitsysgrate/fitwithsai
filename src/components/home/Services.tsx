@@ -1,54 +1,47 @@
-import { Dumbbell, Users, ClipboardCheck, UtensilsCrossed, Activity, UsersRound } from "lucide-react"
+import { Dumbbell, Smartphone, ClipboardCheck, UsersRound, Activity, HeartHandshake } from "lucide-react"
 import Reveal from "@/components/motion/Reveal"
 import { StaggerGroup, StaggerItem } from "@/components/motion/StaggerGroup"
 
 const services = [
     {
         icon: Dumbbell,
-        title: "1:1 Personal Training",
+        title: "Personal Training",
         description:
             "Individualised programs to improve strength, fitness, mobility and confidence.",
     },
     {
-        icon: Users,
-        title: "Group Fitness & Community Programs",
+        icon: Smartphone,
+        title: "Weflex mobile personal training",
         description:
-            "Fun, inclusive and social group sessions that build fitness and friendship.",
+            "On-demand personal training delivered locally by qualified trainers, booked flexibly through the Weflex app.",
     },
     {
         icon: ClipboardCheck,
-        title: "Healthy Lifestyle Coaching",
-        description:
-            "Support with goals, routines, motivation, sleep, stress management and daily habits.",
-    },
-    {
-        icon: UtensilsCrossed,
-        title: "Helping Meal Prep",
-        description:
-            "Support with planning, preparing and cooking healthy meals that fit your lifestyle.",
-    },
-    {
-        icon: Activity,
-        title: "Strength, Balance & Falls Prevention",
+        title: "Strength balance and falls prevention",
         description:
             "Safe and effective exercises to improve balance, flexibility and reduce fall risk.",
     },
     {
         icon: UsersRound,
-        title: "Community Participation",
+        title: "Group fitness & community programs",
         description:
-            "Support to get active in your community and do the things you enjoy.",
+            "Fun, inclusive and social group sessions that build fitness and friendship.",
+    },
+    {
+        icon: Activity,
+        title: "Healthy lifestyle coaching",
+        description:
+            "Support with goals, routines, motivation, sleep, stress management and daily habits.",
+    },
+    {
+        icon: HeartHandshake,
+        title: "Building a Healthy Life",
+        description:
+            "Holistic, ongoing support to help you build sustainable habits and a healthier, happier lifestyle.",
     },
 ]
 
 const Services = () => {
-
-    const handleCardGlow = (e: React.MouseEvent<HTMLDivElement>) => {
-        const card = e.currentTarget
-        const rect = card.getBoundingClientRect()
-        card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`)
-        card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`)
-    }
 
     return (
         <section className="services">

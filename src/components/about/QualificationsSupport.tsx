@@ -8,19 +8,14 @@ const qualifications = [
     "Certificate IV in Fitness",
     "Certificate IV in Training & Assessment",
     "Diploma of Mental Health",
-    "First Aid & CPR",
-    "Working With Children Check",
-    "Police Check (Clear)",
+    "WeFlex Fitness trainer"
 ]
 
 const supportGoals = [
     "To improve their health and fitness",
     "To build confidence and independence",
-    "To manage health conditions",
-    "To learn healthy habits and meal skills",
     "To boost mental wellbeing",
     "To stay active and connected in their community",
-    "And more",
 ]
 
 const QualificationsSupport = () => {
