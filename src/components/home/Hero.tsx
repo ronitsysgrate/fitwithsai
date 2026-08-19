@@ -53,6 +53,7 @@ const Hero = () => {
                         className="btn-primary"
                         whileHover={prefersReducedMotion ? undefined : hoverScale.whileHover}
                         whileTap={prefersReducedMotion ? undefined : hoverScale.whileTap}
+                        onClick={() => router.push('/contact')}
                     >
                         Book Free Consultation
                     </motion.button>
@@ -60,9 +61,9 @@ const Hero = () => {
                         className="btn-secondary"
                         whileHover={prefersReducedMotion ? undefined : hoverScale.whileHover}
                         whileTap={prefersReducedMotion ? undefined : hoverScale.whileTap}
-                        onClick={() => router.push('/contact')}
+                        onClick={() => router.push('/about')}
                     >
-                        Contact Us
+                        Read More
                     </motion.button>
                 </motion.div>
             </motion.div>

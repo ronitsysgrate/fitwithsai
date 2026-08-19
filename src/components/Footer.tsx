@@ -5,26 +5,26 @@ const footerLinks = [
     {
         heading: "Product",
         links: [
-            { label: "Live Sessions", href: "#" },
-            { label: "On-Demand Library", href: "#" },
-            { label: "Coaches", href: "#" },
-            { label: "Plans & Pricing", href: "#" },
+            { label: "Live Sessions", href: "/coming-soon" },
+            { label: "On-Demand Library", href: "/coming-soon" },
+            { label: "Coaches", href: "/coming-soon" },
+            { label: "Plans & Pricing", href: "/coming-soon" },
         ],
     },
     {
         heading: "Company",
         links: [
             { label: "About", href: "/about" },
-            { label: "Careers", href: "#" },
+            { label: "Careers", href: "/coming-soon" },
             { label: "Contact", href: "/contact" },
         ],
     },
     {
         heading: "Legal",
         links: [
-            { label: "Terms of Service", href: "#" },
-            { label: "Privacy Policy", href: "#" },
-            { label: "Refund Policy", href: "#" },
+            { label: "Terms of Service", href: "/terms-of-service" },
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Acknowledgement", href: "/acknowledgement" },
         ],
     },
 ]
