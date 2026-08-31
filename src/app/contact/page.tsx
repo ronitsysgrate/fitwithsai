@@ -8,8 +8,8 @@ const methods = [
         title: "Call",
         description:
             "Talk it through directly — best for quick questions or booking your first session.",
-        value: "+1 (555) 012-3456",
-        href: "tel:+15550123456",
+        value: "0405639615",
+        href: "tel:0405639615",
         cta: "Call now",
     },
     {
@@ -17,8 +17,8 @@ const methods = [
         title: "WhatsApp",
         description:
             "Message anytime, no phone tag. The fastest way to reach a coach between sessions.",
-        value: "+1 (555) 012-3456",
-        href: "https://wa.me/15550123456",
+        value: "0405639615",
+        href: "https://wa.me/0405639615",
         cta: "Message on WhatsApp",
         external: true,
     },
@@ -27,8 +27,8 @@ const methods = [
         title: "Email",
         description:
             "Send over your schedule and goals — a coach will reply within one business day.",
-        value: "hello@fitwithsai.com",
-        href: "mailto:hello@fitwithsai.com",
+        value: "nithin.sai13@gmail.com",
+        href: "mailto:nithin.sai13@gmail.com",
         cta: "Send an email",
     },
 ]

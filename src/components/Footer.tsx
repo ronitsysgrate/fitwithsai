@@ -38,12 +38,12 @@ const socialLinks = [
     {
         icon: Mail,
         label: "Email",
-        href: "mailto:hello@fitwithsai.com",
+        href: "mailto:nithin.sai13@gmail.com",
     },
     {
         icon: Phone,
         label: "Phone",
-        href: "tel:+919876543210",
+        href: "tel:0405639615",
     },
 ]
 

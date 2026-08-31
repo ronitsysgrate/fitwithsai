@@ -143,7 +143,7 @@ const Page = () => {
                     <p className="text-body-md legal-page-text">
                         If you have questions about this policy or how your information
                         is handled, contact me at{" "}
-                        <a href="mailto:hello@fitwithsai.com.au">hello@fitwithsai.com.au</a>.
+                        <a href="mailto:nithin.sai13@gmail.com">nithin.sai13@gmail.com</a>.
                     </p>
                 </section>
             </div>

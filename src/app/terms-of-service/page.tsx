@@ -131,7 +131,7 @@ const Page = () => {
                     </h2>
                     <p className="text-body-md legal-page-text">
                         If you have questions about these Terms, contact me at{" "}
-                        <a href="mailto:hello@fitwithsai.com.au">hello@fitwithsai.com.au</a>.
+                        <a href="mailto:nithin.sai13@gmail.com">nithin.sai13@gmail.com</a>.
                     </p>
                 </section>
             </div>
