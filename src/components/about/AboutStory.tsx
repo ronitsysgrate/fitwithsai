@@ -10,7 +10,7 @@ const AboutStory = () => {
                 <Reveal as="div" className="about-story-media" variant="scaleIn">
                     <div className="about-story-media-frame">
                         <Image
-                            src="/sai.jpg"
+                            src="/sai.jpeg"
                             alt="Sai, founder of Fit With Sai"
                             fill
                             sizes="(min-width: 1024px) 280px, 220px"
